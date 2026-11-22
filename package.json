@@ -1,0 +1,17 @@
+{
+  "name": "jaxycapie-app",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "prep": "mkdir -p www && cp -r index.html manifest.webmanifest sw.js icons www/",
+    "android": "npm run prep && npx cap sync android && npx cap open android",
+    "ios": "npm run prep && npx cap sync ios && npx cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0",
+    "@capacitor/local-notifications": "^6.0.0"
+  },
+  "devDependencies": {"@capacitor/cli": "^6.0.0"}
+}

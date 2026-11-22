@@ -1,0 +1,10 @@
+{
+  "appId": "com.jaxycapie.app",
+  "appName": "Jaxycapie",
+  "webDir": "www",
+  "backgroundColor": "#0a1230",
+  "ios": {"contentInset": "never"},
+  "plugins": {
+    "LocalNotifications": {"smallIcon": "ic_stat_icon_config_sample", "iconColor": "#0A84FF"}
+  }
+}
