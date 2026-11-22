@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Jaxycapie">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <title>Jaxycapie</title>
 <style>
 :root{--dimc:#000;--acc:#0a84ff;--grn:#30d158;--org:#ff9f0a;--red:#ff453a;--sat:env(safe-area-inset-top,0px);--sab:env(safe-area-inset-bottom,0px)}
@@ -42,7 +42,7 @@ h2{font-size:21px;letter-spacing:-.4px;margin:22px 4px 10px;font-weight:700}
 .sw.on{background:var(--grn)}.sw.on:after{transform:translateX(20px)}
 .btn{border:0;border-radius:16px;padding:14px 18px;font:600 16px/1 inherit;font-family:inherit;background:var(--acc);color:#fff;width:100%}
 .btn.sec{background:var(--fill);color:var(--ink)}.btn.red{background:var(--fill);color:var(--red)}
-.btn,.chk,.mini,.plus{transition:transform .4s cubic-bezier(.34,1.56,.64,1),background-color .3s,color .3s,border-color .3s}.btn:active,.tab:active,.chk:active,.mini:active,.plus:active{transform:scale(.94);transition-duration:.12s}
+.btn,.chk,.mini,.plus{transition:transform .35s cubic-bezier(.32,.72,0,1),background-color .3s,color .3s,border-color .3s}.btn:active,.tab:active,.chk:active,.mini:active,.plus:active{transform:scale(.94);transition-duration:.12s}
 .rg{position:relative;flex:none}.ri{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
 .flex{display:flex;align-items:center;gap:14px}.big{font-size:44px;font-weight:800;letter-spacing:-1.5px;line-height:1}
 .wk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:16px}
@@ -57,11 +57,11 @@ h2{font-size:21px;letter-spacing:-.4px;margin:22px 4px 10px;font-weight:700}
 .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--fill);padding:3px;border-radius:14px}.seg button{border:0;background:none;color:var(--ink);padding:10px 4px;border-radius:11px;font:600 13px inherit;font-family:inherit}.seg button.on{background:var(--acc);color:#fff}
 .al{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid rgba(128,128,140,.2)}.al:last-child{border:0}.al .tm{font-size:40px;font-weight:300;letter-spacing:-1.5px;line-height:1}.al.off .tm,.al.off .lb{opacity:.45}.al .lb{font-size:13px;color:var(--mut);margin-top:4px}.al>div:first-child{flex:1}
 .top{display:flex;justify-content:space-between;align-items:flex-start}.plus{width:40px;height:40px;border-radius:50%;border:0;background:var(--acc);color:#fff;font-size:26px;margin-top:8px;line-height:1}
-.tabbar{position:absolute;left:12px;right:12px;bottom:calc(10px + var(--sab));height:68px;border-radius:34px;display:grid;grid-template-columns:repeat(5,1fr);padding:6px;gap:2px;z-index:5}
+.tabbar{position:absolute;left:12px;right:12px;bottom:calc(10px + var(--sab));height:68px;border-radius:34px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px;gap:0;z-index:5}
 .tab{border:0;background:none;color:var(--mut);border-radius:28px;font:600 10px inherit;font-family:inherit;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;transition:.2s}
 .tab svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.tab{position:relative;z-index:1}.tab.on{color:var(--acc)}.tab svg{transition:transform .5s cubic-bezier(.34,1.56,.64,1)}.tab.on svg{transform:translateY(-1px) scale(1.12)}
-.pill{position:absolute;left:6px;top:6px;bottom:6px;width:calc((100% - 12px)/5);border-radius:28px;background:var(--fill);box-shadow:inset 0 1px 0 var(--hi),inset 0 0 14px var(--hi),0 4px 14px var(--gs);transition:transform .65s cubic-bezier(.34,1.35,.5,1);will-change:transform}
+.tab{position:relative;z-index:1;min-width:0;white-space:nowrap;padding:0}.tab.on{color:var(--acc)}.tab svg{transition:transform .45s cubic-bezier(.32,.72,0,1)}.tab.on svg{transform:translateY(-1px) scale(1.12)}
+.pill{position:absolute;left:6px;top:6px;bottom:6px;width:calc((100% - 12px)/5);border-radius:28px;background:var(--fill);box-shadow:inset 0 1px 0 var(--hi),inset 0 0 14px var(--hi),0 4px 14px var(--gs);transition:transform .5s cubic-bezier(.32,.72,0,1);will-change:transform}
 .ov{position:fixed;inset:0;z-index:20;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;pointer-events:none;transition:visibility 0s .55s}.ov:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35);opacity:0;transition:opacity .45s ease}.ov.on{visibility:visible;pointer-events:auto;transition-delay:0s}.ov.on:before{opacity:1}
 .sheet{width:100%;max-width:480px;padding:22px 18px calc(22px + var(--sab));border-radius:34px 34px 0 0;background:var(--ovl);transform:translateY(105%);transition:transform .6s cubic-bezier(.32,.72,0,1)}.ov.on .sheet{transform:none}
 .sheet h3{margin:0 0 14px;font-size:20px}.in{width:100%;border:0;background:var(--fill);color:var(--ink);border-radius:14px;padding:13px;font:500 17px inherit;font-family:inherit;margin-bottom:12px;-webkit-user-select:text;user-select:text}
@@ -163,7 +163,7 @@ const adays=d=>d.length===7?'Setiap hari':d.length?ORD.filter(x=>d.includes(x)).
 function nextAlarm(){const now=new Date();let b=null;S.alarms.filter(a=>a.on).forEach(a=>{const[h,m]=a.t.split(':').map(Number);for(let i=0;i<8;i++){const t=new Date(now);t.setDate(now.getDate()+i);t.setHours(h,m,0,0);if(t>now&&(!a.days.length||a.days.includes(t.getDay()))){if(!b||t<b)b=t;break}}});return b?(b.toDateString()===now.toDateString()?'':DN[b.getDay()]+' ')+p2(b.getHours())+':'+p2(b.getMinutes()):''}
 async function sched(a){if(!NP)return;try{const ids=ORD.map(d=>({id:a.id*10+d}));await NP.cancel({notifications:ids});if(!a.on)return;const pm=await NP.requestPermissions();if(pm.display!=='granted'){toast('Izin notifikasi ditolak');return}const [h,m]=a.t.split(':').map(Number);await NP.schedule({notifications:(a.days.length?a.days:ORD).map(d=>({id:a.id*10+d,title:'Jaxycapie',body:a.label,schedule:{on:{weekday:d+1,hour:h,minute:m},allowWhileIdle:true}}))})}catch(e){toast('Gagal menjadwalkan alarm')}}
 function beep(){try{const c=new(window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(t=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=880;g.gain.setValueAtTime(.25,c.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+t+.25);o.connect(g);g.connect(c.destination);o.start(c.currentTime+t);o.stop(c.currentTime+t+.3)})}catch{}}
-function ringAlarm(label){beep();vib([300,150,300,150,300]);try{if(!NP&&'Notification'in window&&Notification.permission==='granted')navigator.serviceWorker.ready.then(r=>r.showNotification('Jaxycapie',{body:label,icon:'icons/icon-192.png'}))}catch{}
+function ringAlarm(label){beep();vib([300,150,300,150,300]);try{if(!NP&&'Notification'in window&&Notification.permission==='granted')navigator.serviceWorker.ready.then(r=>r.showNotification('Jaxycapie',{body:label,icon:'icon-192.png'}))}catch{}
  $('#sheet').innerHTML=`<h3>⏰ ${label}</h3><p class="note" style="margin:0 0 16px">Waktunya bergerak. Mulai sekarang atau tunda sebentar.</p><button class="btn" data-a="gotrain" style="margin-bottom:10px">Mulai latihan</button><div class="two"><button class="btn sec" data-a="snooze" data-v="${label}">Tunda 10 mnt</button><button class="btn sec" data-a="close">Tutup</button></div>`;$('#ov').classList.add('on')}
 let last='';setInterval(()=>{const n=new Date(),hm=p2(n.getHours())+':'+p2(n.getMinutes()),k=key(n)+hm;if(k!==last){S.alarms.forEach(a=>{if(a.on&&a.t===hm&&(!a.days.length||a.days.includes(n.getDay()))&&!NP){last=k;ringAlarm(a.label)}})}if(S.snz&&Date.now()>=S.snz.at){const l=S.snz.l;S.snz=null;ringAlarm(l)}},10000);
 function aSheet(a){S.edit=a=a||{id:Math.max(0,...S.alarms.map(x=>x.id))+1,t:'07:00',label:'Waktunya olahraga',days:[6,0],on:true,isNew:1};
@@ -178,7 +178,7 @@ function endRun(){if(T){clearInterval(T.h);try{T.wl&&T.wl.release()}catch{}}T=nu
 function startRun(k){T={s:R[k].s,i:0,h:setInterval(tick,250)};$('#run').classList.add('on');try{navigator.wakeLock&&navigator.wakeLock.request('screen').then(w=>T&&(T.wl=w)).catch(()=>{})}catch{}runStep()}
 /* ---------- aksi ---------- */
 const A={
- tab:v=>{tab=v;render();vib(8);const pl=$('.pill');pl&&pl.animate&&pl.animate([{scale:'1 1'},{scale:'1.3 .9',offset:.45},{scale:'1 1'}],{duration:650,easing:'ease-in-out'})},
+ tab:v=>{tab=v;render();vib(8);const pl=$('.pill');pl&&pl.animate&&pl.animate([{scale:'1 1'},{scale:'1.05 .97',offset:.5},{scale:'1 1'}],{duration:500,easing:'ease-in-out'})},
  hab:v=>change(()=>{const h=day().habits;h[v]=!h[v];vib(10)}),
  ex:v=>change(()=>{const e=day().exercises;e[v]=!e[v];vib(10)}),
  w:v=>change(()=>{const d=day();d.water=Math.max(0,d.water+ +v);if(d.water>=S.set.goal)d.habits.water=true;vib(10)}),
